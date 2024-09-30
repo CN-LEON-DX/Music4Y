@@ -1,0 +1,145 @@
+doctype html
+html
+    head 
+        title #{pageTitle}
+        link(href="/client/css/output.css" rel="stylesheet")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+    body.bg-black.text-white.flex.h-screen.overflow-hidden.p-4
+        aside.bg-black.p-8.flex-none(style="width: 10%")
+            nav
+            ul
+                li.mb-6
+                    a.text-xl.font-bold(href="#") Main
+                li.mb-4
+                    a.text-lg(href="#") Radio
+                li.mb-4
+                    a.text-lg(href="#") Podcasts
+                li.mb-4
+                    a.text-lg(href="#") Books
+            h3.mt-8.text-sm.uppercase.text-gray-400 My musicstyle="width: 30%"
+            ul.mt-4
+                li.mb-4
+                    a.text-lg(href="#") Tracks
+                li.mb-4
+                    a.text-lg(href="#") Albums
+                li.mb-4
+                    a.text-lg(href="#") Artists
+                li.mb-4
+                    a.text-lg(href="#") Playlists
+                li.mb-4
+                    a.text-lg(href="#") Files
+            .mt-auto
+                ul.mt-8
+                    li.mb-4
+                        a.text-lg(href="#") Setting
+                    li.mb-4
+                        a.text-lg(href="#") Log out
+
+        // Main Content Section
+        main(class="bg-[#1f1f1f] p-4 md:p-8 flex-grow overflow-y-auto rounded-s-[20px] no-scrollbar" style="width: 70%")
+            .flex.items-center.justify-between.border-b
+                i.fa.fa-search.mr-2(style="color: #ffffff;")
+                input(type="text" placeholder="Search" class="bg-bottom rounded-[20px] bg-[#1f1f1f] px-4 py-2 text-white flex-1 outline-none")
+
+            h2.mt-8.text-2xl.font-bold Main
+            // Featured artistoverflow-hidden
+            .mt-4
+            .relative.h-60.bg-slate-700.items-center.justify-center.rounded-2xl.justify-even.overflow-hidden
+                img.absolute.top-0.left-0.h-full.w-full.object-cover.opacity-40(src="./client/img/main.webp")
+                div.p-4
+                    h3.text-xl.mb-2 The Weeknd
+                    h2.text-2xl.font-bold What Was I Made For?
+                button.bg-white.text-black.px-4.py-2.rounded-full.ml-4.text-center.flex.items-center.absolute.bottom-4
+                    <i class="fa-solid fa-play mr-2"></i>
+                    p Listen now
+
+            // Playlists for you
+            
+            div.flex.justify-between.mt-10
+                h2.text-xl.font-semibold Playlists for you
+                a(href="") View all
+            div(class="mt-4 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4")
+                .bg-gray-800.p-4.rounded-lg
+                    img(src="./client/img/inmynest.png" alt="Dejavu" class="w-full rounded-md")
+                    h3.mt-2.text-lg Dejavu
+                    p.text-sm 10 tracks
+                .bg-gray-800.p-4.rounded-lg
+                    img(src="./client/img/insome-night.png" alt="Something New" class="w-full rounded-md")
+                    h3.mt-2.text-lg Something new
+                    p.text-sm 37 tracks
+                .bg-gray-800.p-4.rounded-lg
+                    img(src="./client/img/dreamscapes.png" alt="Playlist of the day" class="w-full rounded-md")
+                    h3.mt-2.text-lg Playlist of the day
+                    p.text-sm 28 tracks
+                .bg-gray-800.p-4.rounded-lg
+                    img(src="./client/img/coding.png" alt="Playlist of the day" class="w-full rounded-md")
+                    h3.mt-2.text-lg Playlist of the day
+                    p.text-sm 28 tracks
+                .bg-gray-800.p-4.rounded-lg
+                    img(src="./client/img/logimeditation.png" alt="Playlist of the day" class="w-full rounded-md")
+                    h3.mt-2.text-lg Playlist of the day
+                    p.text-sm 28 tracks
+                .bg-gray-800.p-4.rounded-lg
+                    img(src="./client/img/tsunami.png" alt="Playlist of the day" class="w-full rounded-md")
+                    h3.mt-2.text-lg Playlist of the day
+                    p.text-sm 28 tracks
+
+            div.flex.justify-between.mt-10
+                h2.text-xl.font-semibold You may also like
+                a(href="") View all
+            div(class="mt-4 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4")
+                .bg-gray-800.p-4.rounded-lg
+                    img(src="./client/img/waterfractals.png" alt="Dejavu" class="w-full rounded-md")
+                    h3.mt-2.text-lg Dejavu
+                    p.text-sm 10 tracks
+                
+        
+        // Now Playing Section
+        div(class="bg-[#1f1f1f] p-8 border-l border-gray-800 flex flex-col justify-between rounded-tr-[20px] rounded-br-[20px] " style="width: 30%")
+            div.flex.w-full.justify-end.items-center.mb-8
+                p.mr-4.font-semibold Nejavu E.
+                div(class="w-[40px] h-[40px] rounded-full")
+                    img(src="./client/img/home.jpeg" alt="you" class="rounded-full object-cover")
+
+            h2.text-xl.font-semibold Now Playing
+            ul(class="mt-8") 
+                li.flex.justify-between.items-center.mb-6
+                    div.flex.items-center
+                        div(class="w-[40px] h-[40px] mr-2 rounded-lg") 
+                            img(src="./client/img/play-1.png", alt="play" class="rounded-lg w-full object-fit")
+                        div.block
+                            div.text-sm.font-semibold Clouder
+                            div.text-sm.text-gray-400 Jackson Juste
+                    span.text-gray-400 03:30
+                li.flex.justify-between.items-center.mb-6
+                    div.flex.items-center
+                        div(class="w-[40px] h-[40px] mr-2 rounded-lg") 
+                            img(src="./client/img/play-2.png", alt="play" class="rounded-lg w-full object-fit")
+                        div.block
+                            div.text-sm.font-semibold Clouder
+                            div.text-sm.text-gray-400 Jackson Juste
+                    span.text-gray-400 03:30
+                li.flex.justify-between.items-center.mb-6
+                    div.flex.items-center
+                        div(class="w-[40px] h-[40px] mr-2 rounded-lg") 
+                            img(src="./client/img/play-3.png", alt="play" class="rounded-lg w-full object-fit")
+                        div.block
+                            div.text-sm.font-semibold Clouder
+                            div.text-sm.text-gray-400 Jackson Juste
+                    span.text-gray-400 03:30
+    
+            // Control bar at the bottom
+            .mt-auto
+            .flex.items-center.justify-between
+                div.flex.items-center.space-x-4
+                    img(src="cruel-cover.jpg" alt="Current song" class="w-10 h-10 rounded-full")
+                    .text-lg.font-bold Cruel - Jackson Wang
+                div
+                    button.bg-transparent.text-white.p-2.rounded-full.play-btn
+                        i.fa.fa-play
+                    button.bg-transparent.text-white.p-2.rounded-full
+                        i.fa.fa-forward

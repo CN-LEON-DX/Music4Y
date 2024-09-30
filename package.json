@@ -4,7 +4,9 @@
   "description": "Music web with TS, tailwind, pug, mongodb, cloud",
   "main": "index.js",
   "scripts": {
+    "build:css": "tailwindcss -i ./public/admin/css/input.css -o ./public/admin/css/output.css --watch & tailwindcss -i ./public/client/css/input.css -o ./public/client/css/output.css --watch",
     "start": "nodemon index.ts",
+    "start:dev": "npm-run-all --parallel build:css start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,13 +23,16 @@
     "@types/express": "^5.0.0",
     "@types/node": "^22.7.4",
     "nodemon": "^3.1.7",
+    "npm-run-all": "^4.1.5",
     "ts-node": "^10.9.2"
   },
   "dependencies": {
+    "@tailwindcss/line-clamp": "^0.4.4",
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
     "mongoose": "^8.7.0",
     "pug": "^3.0.3",
+    "tailwindcss": "^3.4.13",
     "typescript": "^5.6.2"
   }
 }
