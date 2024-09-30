@@ -1,0 +1,29 @@
+{
+  "name": "music4y",
+  "version": "1.0.0",
+  "description": "Music web with TS, tailwind, pug, mongodb, cloud",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CN-LEON-DX/Music4Y.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CN-LEON-DX/Music4Y/issues"
+  },
+  "homepage": "https://github.com/CN-LEON-DX/Music4Y#readme",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.4",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "typescript": "^5.6.2"
+  }
+}
