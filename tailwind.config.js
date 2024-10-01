@@ -1,10 +1,11 @@
+// tailwind.config.js
 module.exports = {
   content: ["./views/**/*.pug", "./public/**/*.html", "./src/**/*.js"],
   theme: {
     extend: {
       fontFamily: {
-        'open-sans': ['"Open Sans"', 'sans-serif'],
-      }
+        fredoka: ["Fredoka", "sans-serif"],
+      },
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],
