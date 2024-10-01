@@ -1,0 +1,154 @@
+
+extends ../../layouts/default.pug
+
+block main
+    // Featured artist
+    .mt-4
+    .relative.h-60.bg-slate-700.items-center.justify-center.rounded-2xl.justify-even.overflow-hidden
+        img.absolute.top-0.left-0.h-full.w-full.object-cover.opacity-40(src="./client/img/main.webp")
+        div.p-4
+            h3.text-xl.mb-2 The Weeknd
+            h2.text-2xl.font-bold What was I made for?
+        button.bg-white.text-black.px-4.py-2.rounded-full.ml-4.text-center.flex.items-center.absolute.bottom-4
+            <i class="fa-solid fa-play mr-2"></i>
+            p Listen now
+
+    // Playlists for you
+    
+    div.flex.justify-between.mt-10
+        h2.text-xl.font-semibold Playlists for you
+        a(href="") View all
+    div(class="mt-4 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4")
+        .bg-gray-800.p-4.rounded-lg
+            img(src="./client/img/inmynest.png" alt="Dejavu" class="w-full rounded-md")
+            h3.mt-2.text-lg Dejavu
+            p.text-sm 10 tracks
+        .bg-gray-800.p-4.rounded-lg
+            img(src="./client/img/insome-night.png" alt="Something New" class="w-full rounded-md")
+            h3.mt-2.text-lg Some nights
+            p.text-sm 37 tracks
+        .bg-gray-800.p-4.rounded-lg
+            img(src="./client/img/dreamscapes.png" alt="Playlist of the day" class="w-full rounded-md")
+            h3.mt-2.text-lg Dreamscape
+            p.text-sm 28 tracks
+        .bg-gray-800.p-4.rounded-lg
+            img(src="./client/img/coding.png" alt="Playlist of the day" class="w-full rounded-md")
+            h3.mt-2.text-lg Coding list
+            p.text-sm 28 tracks
+        .bg-gray-800.p-4.rounded-lg
+            img(src="./client/img/logimeditation.png" alt="Playlist of the day" class="w-full rounded-md")
+            h3.mt-2.text-lg Lofi meditation
+            p.text-sm 28 tracks
+        .bg-gray-800.p-4.rounded-lg
+            img(src="./client/img/tsunami.png" alt="Playlist of the day" class="w-full rounded-md")
+            h3.mt-2.text-lg Susurrations
+            p.text-sm 28 tracks
+
+    div.flex.justify-between.mt-10
+        h2.text-xl.font-semibold You may also like
+        a(href="") View all
+    div(class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6")
+        div.flex.justify-between.items-center.mb-6
+            div.flex.items-center
+                div(class="w-[40px] h-[40px] mr-2 rounded-lg") 
+                    img(src="./client/img/alsolike-1.png", alt="play" class="rounded-lg w-full object-fit")
+                div.block
+                    div.text-sm.font-semibold Clouder
+                    div.text-sm.text-gray-400 Jackson Juste
+            span.text-white 03:30
+        div.flex.justify-between.items-center.mb-6
+            div.flex.items-center
+                div(class="w-[40px] h-[40px] mr-2 rounded-lg") 
+                    img(src="./client/img/alsolike-2.png", alt="play" class="rounded-lg w-full object-fit")
+                div.block
+                    div.text-sm.font-semibold Clouder
+                    div.text-sm.text-gray-400 Jackson Juste
+            span.text-white 03:30
+        div.flex.justify-between.items-center.mb-6
+            div.flex.items-center
+                div(class="w-[40px] h-[40px] mr-2 rounded-lg") 
+                    img(src="./client/img/alsolike-3.png", alt="play" class="rounded-lg w-full object-fit")
+                div.block
+                    div.text-sm.font-semibold Clouder
+                    div.text-sm.text-gray-400 Jackson Juste
+            span.text-white 03:30
+        div.flex.justify-between.items-center.mb-6
+            div.flex.items-center
+                div(class="w-[40px] h-[40px] mr-2 rounded-lg") 
+                    img(src="./client/img/alsolike-4.png", alt="play" class="rounded-lg w-full object-fit")
+                div.block
+                    div.text-sm.font-semibold Clouder
+                    div.text-sm.text-gray-400 Jackson Juste
+            span.text-white 03:30
+        div.flex.justify-between.items-center.mb-6
+            div.flex.items-center
+                div(class="w-[40px] h-[40px] mr-2 rounded-lg") 
+                    img(src="./client/img/alsolike-5.png", alt="play" class="rounded-lg w-full object-fit")
+                div.block
+                    div.text-sm.font-semibold Clouder
+                    div.text-sm.text-gray-400 Jackson Juste
+            span.text-white 03:30
+        div.flex.justify-between.items-center.mb-6
+            div.flex.items-center
+                div(class="w-[40px] h-[40px] mr-2 rounded-lg") 
+                    img(src="./client/img/alsolike-6.png", alt="play" class="rounded-lg w-full object-fit")
+                div.block
+                    div.text-sm.font-semibold Clouder
+                    div.text-sm.text-gray-400 Jackson Juste
+            span.text-white 03:30
+        div.flex.justify-between.items-center.mb-6
+            div.flex.items-center
+                div(class="w-[40px] h-[40px] mr-2 rounded-lg") 
+                    img(src="./client/img/alsolike-7.png", alt="play" class="rounded-lg w-full object-fit")
+                div.block
+                    div.text-sm.font-semibold Clouder
+                    div.text-sm.text-gray-400 Jackson Juste
+            span.text-white 03:30
+        div.flex.justify-between.items-center.mb-6
+            div.flex.items-center
+                div(class="w-[40px] h-[40px] mr-2 rounded-lg") 
+                    img(src="./client/img/alsolike-8.png", alt="play" class="rounded-lg w-full object-fit")
+                div.block
+                    div.text-sm.font-semibold Clouder
+                    div.text-sm.text-gray-400 Jackson Juste
+            span.text-white 03:30
+    
+block detail
+    h2.text-xl.font-semibold Now Playing
+    ul(class="mt-8") 
+        li.flex.justify-between.items-center.mb-6
+            div.flex.items-center
+                div(class="w-[40px] h-[40px] mr-2 rounded-lg") 
+                    img(src="./client/img/play-1.png", alt="play" class="rounded-lg w-full object-fit")
+                div.block
+                    div.text-sm.font-semibold Clouder
+                    div.text-sm.text-gray-400 Jackson Juste
+            span.text-gray-400 03:30
+        li.flex.justify-between.items-center.mb-6
+            div.flex.items-center
+                div(class="w-[40px] h-[40px] mr-2 rounded-lg") 
+                    img(src="./client/img/play-2.png", alt="play" class="rounded-lg w-full object-fit")
+                div.block
+                    div.text-sm.font-semibold Clouder
+                    div.text-sm.text-gray-400 Jackson Juste
+            span.text-gray-400 03:30
+        li.flex.justify-between.items-center.mb-6
+            div.flex.items-center
+                div(class="w-[40px] h-[40px] mr-2 rounded-lg") 
+                    img(src="./client/img/play-3.png", alt="play" class="rounded-lg w-full object-fit")
+                div.block
+                    div.text-sm.font-semibold Clouder
+                    div.text-sm.text-gray-400 Jackson Juste
+            span.text-gray-400 03:30
+
+    .mt-auto
+    .flex.items-center.justify-between
+        div.flex.items-center.space-x-4
+            img(src="./client/img/play-1.png" alt="Current song" class="w-10 h-10 rounded-full")
+            .text-lg.font-bold Cruel - Jackson Wang
+        div
+            button.bg-transparent.text-white.p-2.rounded-full.play-btn
+                i.fa.fa-play
+            button.bg-transparent.text-white.p-2.rounded-full
+                i.fa.fa-forward
+
