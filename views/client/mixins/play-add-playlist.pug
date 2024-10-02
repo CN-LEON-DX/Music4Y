@@ -1,0 +1,8 @@
+mixin playAddPlaylist(colorBg, colorIcon, fontSize)
+  div.flex.justify-between.mt-4.items-center
+    button(class="w-[24px] h-[24px] rounded-full border text-sm")
+      i(class="fa-solid fa-plus")
+    button(class="w-[38px] h-[38px] rounded-full text-center mr-4", style=`background-color:${colorBg}; width: ${fontSize}; height: ${fontSize}`)
+      i(class="fa-solid fa-play", style=`color:${colorIcon};`)
+
+

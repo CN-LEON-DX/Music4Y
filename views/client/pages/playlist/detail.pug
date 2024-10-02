@@ -1,0 +1,104 @@
+extends ../../layouts/default.pug
+include ../../mixins/play-add-playlist.pug
+
+
+block main
+    div(class="flex py-4 bg-gradient-to-b from-grey-400 to-black items-center")
+        div(class="w-[120px] h-[120px] overflow-hidden mr-4")
+            img(src="https://res.cloudinary.com/dswmkjagw/image/upload/v1727851845/Screenshot_from_2024-10-02_13-50-27_xm5t8f.png", alt="" class="object-contain w-full")
+        .flex-noneborder-grey-900
+            p postcard
+            h2.text-5xl.my-1 Big Think
+            p.mt-2 big think
+    div.flex.mb-4
+        button.border.border-slate-400.bg-black.text-white.mr-4.px-2.rounded-xl
+            p.text-sm.text-center Follow
+        button.text-white
+            <i class="fa-solid fa-ellipsis" style="color: #ffffff;"></i>
+
+    div.flex-none.p-2.bg-gray-800.rounded-md.px-3.mb-4
+        p.mb-2.text-gray-400 Lastest episode
+
+        div.flex.items-center.mb-2
+            <i class="fa-duotone fa-solid fa-circle-dot"></i>
+            p.ml-2 Achive Excillent by Being Unresonable. Will Guidara's Bold Approach | Big Think +
+        p.text-md.text-gray-500 Big Think
+        p.mb-2.text-gray-400
+            Will Guidara, owner of iconic restaurants such as Eleven Madison Park, explains how hospitality is the number one thing that can help your business truly succeed. Eventually, someone is going to make a better product, or build a...
+        
+        p Today 6 mins 14 sec
+
+        +playAddPlaylist('#4A148C', '#ffffff')
+                
+    // list episode or songs
+    div.flex.justify-between
+        button.flex.items-center
+            h3.mr-2 All espisode
+            <i class="fa-solid fa-caret-down" style="color: #ffffff;"></i>
+        button.flex.items-center
+            h3.mr-2 Newest to Oldest
+            <i class="fa-solid fa-caret-down" style="color: #ffffff;"></i>
+    
+    hr.border-gray-400.my-4
+
+    // item
+    div.flex.p-2
+        div(class="w-[60px] h-[60px] overflow-hidden mr-4")
+           img(src="https://res.cloudinary.com/dswmkjagw/image/upload/v1727878220/Screenshot_from_2024-10-02_21-10-01_ywqpcf.png", alt="" class="w-full object-contain")
+        div.flex-1
+            p(class="text-md hover:underline") Achieve Excellence by Being Unreasonable: Will Guidara's Bold Approach | Big Think+
+            p.text-md Big Think
+            p.text-sm.text-gray-600 Will Guidara, owner of iconic restaurants such as Eleven Madison Park, explains how hospitality is the number one thing that can help your business truly succeed. Eventually, someone is...
+            p.text-sm Sep. 1 min 36 secs
+            +playAddPlaylist('#ffffff', '#000000', '30px', '30px')
+    div.flex.p-2
+        div(class="w-[60px] h-[60px] overflow-hidden mr-4")
+           img(src="https://res.cloudinary.com/dswmkjagw/image/upload/v1727881239/Screenshot_from_2024-10-02_22-00-25_cwv4z2.png" alt="" class="w-full object-contain")
+        div.flex-1
+            p(class="text-md hover:underline") The great free will debate | Bill Nye, Michio Kaku, Robert Sapolsky, Steven Pinker & more
+            p.text-md Big Think
+            p.text-sm.text-gray-600 The great free will debate "What does it mean to have-or not have-free will? Were th...
+            p.text-sm Sep. 2 min 30 secs
+            +playAddPlaylist('#ffffff', '#000000', '30px', '30px')
+
+    div.flex.p-2
+        div(class="w-[60px] h-[60px] overflow-hidden mr-4")
+           img(src="https://res.cloudinary.com/dswmkjagw/image/upload/v1727881456/Screenshot_from_2024-10-02_22-03-52_hbydkg.png", alt="" class="w-full object-contain")
+        div.flex-1
+            p(class="text-md hover:underline") Free speech, explain by Greg Lukiaoff - BIGTHINK
+            p.text-md Big Think
+            p.text-sm.text-gray-600 Author of the Canceling of the American Mind Greg Lukianoff explains the current state of free speech in the United States. Greg Lukianoff, president of the @TheFIREorg discusses how fre...
+            p.text-sm Sep. 3 min 14 secs
+            +playAddPlaylist('#ffffff', '#000000', '30px', '30px')
+
+
+
+
+block detail
+    h3.text-2xl.mb-4 Big think
+    img(src="https://res.cloudinary.com/dswmkjagw/image/upload/v1727878220/Screenshot_from_2024-10-02_21-10-01_ywqpcf.png", alt="" class="w-full  aspect-video object-cover rounded-xl")
+    div.flex.items-center.mt-4.mb-4
+        div.flex-1
+            p(class="text-lg font-semibold hover:underline line-clamp-1") Achieve Excellence by Being Unreasonable: Will Guidara's Bold Approach | Big Think+
+            p.text-md.text-gray-500 Big Think
+        button(class="w-[24px] h-[24px] ml-2 rounded-full border text-sm")
+            i(class="fa-solid fa-plus")
+    
+    div.p-2.bg-gray-700.rounded-lg.py-3
+        p.text-lg.mb-2 About the postcard
+        p(class="line-clamp-3 text-sm text-gray-400") Our mission is make you smarter, faster. Listen to interview with the worlds biggest thinker in science, philosophy, bussiness and more. Bigthink is the leading...
+    
+    div.flex.justify-between.mt-4.mb-8
+        div.flex
+            div(class="w-[44px] h-[44px] overflow-hidden mr-4")
+                img(src="https://res.cloudinary.com/dswmkjagw/image/upload/v1727851845/Screenshot_from_2024-10-02_13-50-27_xm5t8f.png", alt="" class="w-full object-contain")
+            div
+                p.text-md Big Think
+                p.text-gray-500.text-sm bigthink
+        button.rounded.border.px-4.rounded-xl
+            p Follow
+    div
+        p.font-semibold.text-lg.mb-4 Discover more
+        div(class="flex ")
+            a(href="#" class="py-2 px-4 bg-gray-700 rounded-[20px] mr-2") Documentary 
+            a(href="#" class="py-2 px-4 bg-gray-700 rounded-[20px]") Science 
