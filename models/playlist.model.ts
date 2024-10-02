@@ -1,11 +1,13 @@
 import mongoose from "mongoose";
 
-const topicSchema = new mongoose.Schema(
+const playlistSchema = new mongoose.Schema(
   {
     title: String,
     desciption: String,
     thumbnail: String,
     status: String,
+    author: String,
+    categoryID: String,
     slug: {
       type: String,
       unique: true,
@@ -21,6 +23,6 @@ const topicSchema = new mongoose.Schema(
   }
 );
 
-const Topic = mongoose.model("Topics", topicSchema, "topics");
+const Playlist = mongoose.model("Playlist", playlistSchema, "playlist");
 
-export default Topic;
+export default Playlist;

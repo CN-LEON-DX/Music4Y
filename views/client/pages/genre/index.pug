@@ -1,0 +1,15 @@
+
+
+extends ../../layouts/default.pug
+
+block main
+    div.flex.justify-between.mt-10
+        h2.text-xl.font-semibold= pageTitle
+        a(href="") View all
+    div(class="mt-4 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4")
+        each item in genres
+            a(href="#").bg-gray-800.p-2.rounded-lg.cursor-pointer
+                img(src=item.thumbnail alt="Dejavu" class="w-full rounded-md")
+                h3.mt-2.text-md= item.title
+                p.text-sm.text-gray-400= item.author
+block detail

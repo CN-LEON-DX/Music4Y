@@ -689,6 +689,10 @@ body{
   flex-grow: 1;
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
+
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -723,6 +727,10 @@ body{
 
 .gap-6{
   gap: 1.5rem;
+}
+
+.gap-2{
+  gap: 0.5rem;
 }
 
 .space-x-4 > :not([hidden]) ~ :not([hidden]){
@@ -764,6 +772,16 @@ body{
   border-end-start-radius: 20px;
 }
 
+.rounded-t-lg{
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.rounded-b-lg{
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
 .rounded-br-\[20px\]{
   border-bottom-right-radius: 20px;
 }
@@ -800,9 +818,9 @@ body{
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
-.bg-indigo-950{
+.bg-gray-900{
   --tw-bg-opacity: 1;
-  background-color: rgb(30 27 75 / var(--tw-bg-opacity));
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
 .bg-slate-700{
@@ -817,6 +835,20 @@ body{
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-gradient-to-b{
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.from-purple-800{
+  --tw-gradient-from: #6b21a8 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(107 33 168 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-black{
+  --tw-gradient-to: #000 var(--tw-gradient-to-position);
 }
 
 .bg-bottom{
@@ -836,6 +868,10 @@ body{
   padding: 1rem;
 }
 
+.p-6{
+  padding: 1.5rem;
+}
+
 .p-8{
   padding: 2rem;
 }
@@ -850,10 +886,6 @@ body{
   padding-bottom: 0.5rem;
 }
 
-.pt-8{
-  padding-top: 2rem;
-}
-
 .pt-10{
   padding-top: 2.5rem;
 }
@@ -865,6 +897,11 @@ body{
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-lg{
@@ -907,6 +944,16 @@ body{
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-gray-900{
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.text-gray-300{
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 .opacity-40{
@@ -958,6 +1005,10 @@ body{
 
   .md\:grid-cols-6{
     grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-5{
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
   .md\:p-8{

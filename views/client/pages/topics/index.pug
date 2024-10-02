@@ -3,16 +3,16 @@ extends ../../layouts/default.pug
 
 block main
 
-    // Playlists for you
+    // genres for you
     
     div.flex.justify-between.mt-10
         h2.text-xl.font-semibold Topics for you
         a(href="") View all
     div(class="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4")
         each item in topics
-            a(href=`/song/${item.slug}` class="bg-gray-800 p-2 rounded-lg")
+            a(href=`/genre/${item.slug}/${item._id}` class="bg-gray-800 p-2 rounded-lg")
                 img(src=item.thumbnail alt=item.title class="w-full rounded-md")
-            
+
 block detail
     h2.text-xl.font-semibold Now Playing
     ul(class="mt-8") 
