@@ -4,6 +4,7 @@ import { topicRoutes } from "./topic.route";
 import { homeRoutes } from "./home.route";
 import { genreRoutes } from "./genre.route";
 import { playlistRoutes } from "./playlist.route";
+import { showRoutes } from "./show.route";
 
 const clientRoutes = (app: Express): void => {
   app.use("/", homeRoutes);
@@ -11,6 +12,7 @@ const clientRoutes = (app: Express): void => {
   app.use("/topics", topicRoutes);
   app.use("/genre", genreRoutes);
   app.use("/playlist", playlistRoutes);
+  app.use("/show", showRoutes);
 };
 
 export default clientRoutes;

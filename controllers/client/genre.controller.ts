@@ -17,7 +17,6 @@ export const genre = async (req: Request, res: Response) => {
     categoryID: genreID,
   });
 
-  console.log(genre);
 
   title = title[0].toUpperCase() + title.slice(1).toLowerCase();
   res.render("client/pages/genre/index", {
@@ -31,7 +30,6 @@ export const listTopic = async (req: Request, res: Response) => {
   let slug = req.params.slugTopic;
   let topicID = req.params.topicID;
 
-  console.log(slug);
   // let find some category
   let categories = await Category.find({
     deleted: false,

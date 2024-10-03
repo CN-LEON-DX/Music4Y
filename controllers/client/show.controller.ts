@@ -4,24 +4,27 @@ import Song from "../../models/song.model";
 import Category from "../../models/category.model";
 import Playlist from "../../models/playlist.model";
 import Genre from "../../models/genre.model";
+import Postcard from "../../models/postcard.model";
 
 const router: Router = Router();
 
 export const detail = async (req: Request, res: Response) => {
-  let genreID = req.params.genreID;
+  let slug = req.params.slugItem;
   // console.log(playlistID);/
 
-  const playlist = await Playlist.find({
-    deleted: false,
-    genreID: genreID,
-  });
-  const genre = await Genre.findOne({
-    _id: genreID,
-  });
+  let genre = req.params.genreName;
+  console.log(genre);
+  
+  if (genre == "postcard"){
+    const item = await Postcard.findOne({
+        deleted: false,
+        slug: slug,
+    })
 
-  res.render("client/pages/playlist/detail", {
+    console.log(item);
+  }
+
+  res.render("client/pages/show/detail", {
     pageTitle: "Playlist",
-    playlist: playlist,
-    genre: genre,
   });
 };

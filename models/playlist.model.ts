@@ -3,11 +3,10 @@ import mongoose from "mongoose";
 const playlistSchema = new mongoose.Schema(
   {
     title: String,
-    desciption: String,
+    description: String,
     thumbnail: String,
     status: String,
     author: String,
-    categoryID: String,
     slug: {
       type: String,
       unique: true,
@@ -17,6 +16,11 @@ const playlistSchema = new mongoose.Schema(
       default: false,
     },
     deletedAt: Date,
+    views: Number,
+    likes: Number,
+    duration: String,
+    tags: Array,
+    genreID: String,
   },
   {
     timestamps: true,

@@ -5,11 +5,11 @@ include ../../mixins/play-add-playlist.pug
 block main
     div(class="flex py-4 bg-gradient-to-b from-grey-400 to-black items-center")
         div(class="w-[120px] h-[120px] overflow-hidden mr-4")
-            img(src="https://res.cloudinary.com/dswmkjagw/image/upload/v1727851845/Screenshot_from_2024-10-02_13-50-27_xm5t8f.png", alt="" class="object-contain w-full")
+            img(src=genre.thumbnail, alt="" class="object-contain w-full")
         .flex-noneborder-grey-900
             p postcard
-            h2.text-5xl.my-1 Big Think
-            p.mt-2 big think
+            h2.text-5xl.my-1= genre.title
+            p.mt-2= genre.title.toLowerCase()
     div.flex.mb-4
         button.border.border-slate-400.bg-black.text-white.mr-4.px-2.rounded-xl
             p.text-sm.text-center Follow
@@ -42,34 +42,17 @@ block main
     hr.border-gray-400.my-4
 
     // item
-    div.flex.p-2
-        div(class="w-[60px] h-[60px] overflow-hidden mr-4")
-           img(src="https://res.cloudinary.com/dswmkjagw/image/upload/v1727878220/Screenshot_from_2024-10-02_21-10-01_ywqpcf.png", alt="" class="w-full object-contain")
-        div.flex-1
-            p(class="text-md hover:underline") Achieve Excellence by Being Unreasonable: Will Guidara's Bold Approach | Big Think+
-            p.text-md Big Think
-            p.text-sm.text-gray-600 Will Guidara, owner of iconic restaurants such as Eleven Madison Park, explains how hospitality is the number one thing that can help your business truly succeed. Eventually, someone is...
-            p.text-sm Sep. 1 min 36 secs
-            +playAddPlaylist('#ffffff', '#000000', '30px', '30px')
-    div.flex.p-2
-        div(class="w-[60px] h-[60px] overflow-hidden mr-4")
-           img(src="https://res.cloudinary.com/dswmkjagw/image/upload/v1727881239/Screenshot_from_2024-10-02_22-00-25_cwv4z2.png" alt="" class="w-full object-contain")
-        div.flex-1
-            p(class="text-md hover:underline") The great free will debate | Bill Nye, Michio Kaku, Robert Sapolsky, Steven Pinker & more
-            p.text-md Big Think
-            p.text-sm.text-gray-600 The great free will debate "What does it mean to have-or not have-free will? Were th...
-            p.text-sm Sep. 2 min 30 secs
-            +playAddPlaylist('#ffffff', '#000000', '30px', '30px')
-
-    div.flex.p-2
-        div(class="w-[60px] h-[60px] overflow-hidden mr-4")
-           img(src="https://res.cloudinary.com/dswmkjagw/image/upload/v1727881456/Screenshot_from_2024-10-02_22-03-52_hbydkg.png", alt="" class="w-full object-contain")
-        div.flex-1
-            p(class="text-md hover:underline") Free speech, explain by Greg Lukiaoff - BIGTHINK
-            p.text-md Big Think
-            p.text-sm.text-gray-600 Author of the Canceling of the American Mind Greg Lukianoff explains the current state of free speech in the United States. Greg Lukianoff, president of the @TheFIREorg discusses how fre...
-            p.text-sm Sep. 3 min 14 secs
-            +playAddPlaylist('#ffffff', '#000000', '30px', '30px')
+    each item in playlist
+        div.flex.p-2
+            div(class="w-[60px] h-[60px] overflow-hidden mr-4")
+                a(href=`/show/${genre.genre}/${item.slug}`) 
+                    img(src=item.thumbnail, alt=item.title, class="w-auto object-fit")
+            div.flex-1
+                a(href=`/show/${genre.genre}/${item.slug}/` class="text-md hover:underline")= item.title
+                p.text-md= item.author
+                p.text-sm.text-gray-600= item.description
+                p.text-sm= item.duration
+                +playAddPlaylist('#ffffff', '#000000', '30px', '30px')
 
 
 

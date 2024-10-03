@@ -17,6 +17,5 @@ export const detail = async (req: Request, res: Response) => {
   const topics = await Topic.find({
     deleted: false,
   });
-  console.log(topics);
   res.render("client/pages/topics/detail");
 };
