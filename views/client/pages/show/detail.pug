@@ -2,8 +2,52 @@
 extends ../../layouts/default.pug
 include ../../mixins/play-add-playlist.pug
 
-
 block main
+    div(class="flex p-4 bg-gradient-to-b from-stone-500 to-blue-700 mt-4 rounded-lg ")
+        div(class="w-[200px] h-[200px] overflow-hidden mr-4 shadow-xl")
+            img(src=podcast.thumbnail alt="" class="object-contain w-full")
+        .flex-1.border-grey-900.flex.flex-col.justify-center
+            p podcast
+            h2.text-2xl.my-1.font-semibold= podcast.title
+            p.mt-2.text-xl= podcast.author
+
+    div(class="flex mt-6 gap-4 items-center justify-end ")
+        
+        button(class="w-[30px] h-[30px] border-gray-400 rounded-full border border-2 text-sm text-center")
+            <i class="fa-solid fa-arrow-down" style="color: #D3D3D3;"></i>
+        button(class="w-[30px] h-[30px] border-gray-400 rounded-full border border-2 text-sm text-center")
+            i(class="fa-solid fa-plus" style=`color: #D3D3D3;`)
+        button(class="w-[30px] h-[30px] border-gray-400 rounded-full text-sm text-center")
+            <i class="fa-solid fa-ellipsis" style="color: #D3D3D3;"></i>
+        button(class="w-[44px] h-[44px] rounded-full text-center", style=`background-color: #4A148C;`)
+            i(class="fa-solid fa-play", style=`color: #ffffff;`)
+    div.mt-4
+        div.flex.justify-between
+            h2.text-2xl.font-semibold Espisode description
+            button(class="px-4 py-2 rounded-[20px] bg-gray-900 border")
+                a(href="#") See all espisode 
+        //- Transcipthttps://res.cloudinary.com/dswmkjagw/image/upload/v1727878220/Screensh…
+        // Assuming 'podcast' is available in your Pug template context
+        .podcast
+            p.mb-2 Author: #{podcast.author}
+            p.mb-2 Views: #{podcast.views}
+            p.mb-2 Likes: #{podcast.likes}
+        
+            // Use each line break for a new paragraph if transcript uses <br> tags for breaks
+            p.text-xl.mb-2.mt-2 Transcript
+            p.text-gray-500.text-md !{podcast.transcript}
+
+
+        h2.text-xl.text-gray-500.mb-2 Go deeper with Big Think
+        p.text-gray-500.text-md.flex.items-center
+            <i class="fa-solid fa-caret-right mr-2" style="color: #D3D3D3;"></i> Become the member
+        p.text-lg.mt-2.text-gray-500 Get exclusive access to full interviews, early access to new release. Big think merch and more. https:member.bigthink.com
+        
+        p.text-gray-500.text-md.flex.items-center.mt-4
+            <i class="fa-solid fa-caret-right mr-2" style="color: #D3D3D3;"></i> Get Bigthink+ for bussiness
+        p.text-lg.mt-2.text-gray-500 Get exclusive access to full interviews, early access to new release. Big think merch and more. https:member.bigthink.com
+        
+    
 
 block detail
     h3.text-2xl.mb-4 Big think
@@ -16,7 +60,7 @@ block detail
             i(class="fa-solid fa-plus")
     
     div.p-2.bg-gray-700.rounded-lg.py-3
-        p.text-lg.mb-2 About the postcard
+        p.text-lg.mb-2 About the podcast
         p(class="line-clamp-3 text-sm text-gray-400") Our mission is make you smarter, faster. Listen to interview with the worlds biggest thinker in science, philosophy, bussiness and more. Bigthink is the leading...
     
     div.flex.justify-between.mt-4.mb-8

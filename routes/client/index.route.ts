@@ -5,6 +5,7 @@ import { homeRoutes } from "./home.route";
 import { genreRoutes } from "./genre.route";
 import { playlistRoutes } from "./playlist.route";
 import { showRoutes } from "./show.route";
+import { songRoutes } from "./song.route";
 
 const clientRoutes = (app: Express): void => {
   app.use("/", homeRoutes);
@@ -12,6 +13,7 @@ const clientRoutes = (app: Express): void => {
   app.use("/topics", topicRoutes);
   app.use("/genre", genreRoutes);
   app.use("/playlist", playlistRoutes);
+  app.use("/song", songRoutes);
   app.use("/show", showRoutes);
 };
 

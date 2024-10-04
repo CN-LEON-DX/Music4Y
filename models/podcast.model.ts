@@ -1,19 +1,22 @@
-
 import mongoose from "mongoose";
 
-const postcardSchema = new mongoose.Schema(
+const podcastSchema = new mongoose.Schema(
   {
     title: String,
     singerID: String,
     topicId: String,
-    albumID: String,
+    author: String,
     desciption: String,
     lyrics: String,
-    transcipt: String,
+    transcript: {
+      type: String,
+      default: "",
+    },
     genre: String,
     status: String,
-    likes: Number, 
+    likes: Number,
     thumbnail: String,
+    duration: String,
     slug: {
       type: String,
       unique: true,
@@ -29,6 +32,6 @@ const postcardSchema = new mongoose.Schema(
   }
 );
 
-const Postcard = mongoose.model("Postcards", postcardSchema, "postcards");
+const Podcast = mongoose.model("podcasts", podcastSchema, "podcasts");
 
-export default Postcard;
+export default Podcast;

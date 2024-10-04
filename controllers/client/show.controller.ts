@@ -4,7 +4,7 @@ import Song from "../../models/song.model";
 import Category from "../../models/category.model";
 import Playlist from "../../models/playlist.model";
 import Genre from "../../models/genre.model";
-import Postcard from "../../models/postcard.model";
+import Podcast from "../../models/podcast.model";
 
 const router: Router = Router();
 
@@ -13,18 +13,20 @@ export const detail = async (req: Request, res: Response) => {
   // console.log(playlistID);/
 
   let genre = req.params.genreName;
+
+  console.log(slug);
   console.log(genre);
-  
-  if (genre == "postcard"){
-    const item = await Postcard.findOne({
-        deleted: false,
-        slug: slug,
-    })
 
-    console.log(item);
-  }
+  if (genre === "podcast") {
+    let podcast = await Podcast.findOne({
+      deleted: false,
+      slug: slug,
+    });
 
-  res.render("client/pages/show/detail", {
-    pageTitle: "Playlist",
-  });
+    console.log(podcast);
+    res.render("client/pages/show/detail", {
+      pageTitle: "Playlist",
+      podcast: podcast,
+    });
+  } else res.send("Not found 404");
 };

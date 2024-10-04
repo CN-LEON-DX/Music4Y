@@ -17,7 +17,6 @@ export const genre = async (req: Request, res: Response) => {
     categoryID: genreID,
   });
 
-
   title = title[0].toUpperCase() + title.slice(1).toLowerCase();
   res.render("client/pages/genre/index", {
     pageTitle: title ? title : "Songs",
@@ -36,6 +35,7 @@ export const listTopic = async (req: Request, res: Response) => {
     topicID: topicID,
   });
 
+  slug = slug[0].toUpperCase() + slug.slice(1).toLowerCase();
   res.render("client/pages/category/list", {
     pageTitle: slug ? slug : "Songs",
     categories,
