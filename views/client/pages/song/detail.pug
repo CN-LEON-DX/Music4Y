@@ -1,0 +1,82 @@
+extends ../../layouts/default.pug
+include ../../mixins/play-add-playlist.pug
+
+
+block main
+    div(class="flex py-4 bg-gradient-to-b from-grey-400 to-black items-center")
+        div(class="w-[120px] h-[120px] overflow-hidden mr-4")
+            img(src=song.thumbnail, alt="" class="object-contain w-full")
+        .flex-noneborder-grey-900
+            p Single
+            h2.text-5xl.my-1= song.title
+            p.mt-2.text-sm.font-semibold= singer.name + " - " + song.duration
+
+    div(class="flex mt-6 gap-4 items-center justify-end mb-4")
+        button(class="w-[30px] h-[30px] border-gray-400 rounded-full border border-2 text-sm text-center")
+            <i class="fa-solid fa-arrow-down" style="color: #D3D3D3;"></i>
+        button(class="w-[30px] h-[30px] border-gray-400 rounded-full border border-2 text-sm text-center")
+            i(class="fa-solid fa-plus" style=`color: #D3D3D3;`)
+        button(class="w-[30px] h-[30px] border-gray-400 rounded-full border border-2 text-sm text-center")
+            <i class="fa-solid fa-shuffle" style="color: #D3D3D3;"></i>
+        
+        button(class="w-[30px] h-[30px] border-gray-400 rounded-full text-sm text-center")
+            <i class="fa-solid fa-ellipsis" style="color: #D3D3D3;"></i>
+        
+        button(class="w-[44px] h-[44px] rounded-full text-center", style=`background-color: #4A148C;`)
+            i(class="fa-solid fa-play", style=`color: #ffffff;`)
+
+                
+    // list episode or songs
+    table.w-full.text-left
+        thead
+            tr.border-b.border-gray-500
+                th(class="w-1/12 px-4 py-2 text-left") <i class="fa-solid fa-hashtag" style="color: #fcfcfc;"></i>
+                th(class="w-6/12 px-4 py-2 text-left") Title
+                th(class="w-3/12 px-4 py-2 text-left") Plays
+                th(class="w-2/12 px-4 py-2 text-left") <i class="fa-regular fa-clock" style="color: #ffffff;"></i> Duration
+        tbody
+            tr.border-b.border-gray-500
+                td(class="w-1/12 px-4 py-2 text-left") 1
+                td(class="w-6/12 px-4 py-2 text-left")
+                    p= song.title 
+                    p= singer.name
+                td(class="w-3/12 px-4 py-2 text-left")= song.plays
+                td(class="w-2/12 px-4 py-2 text-left")= song.duration
+            
+            // each item in songRelate
+            //     tr.border-b.border-gray-500
+            //         td.w-1/12.px-4.py-2.text-left= item.title
+            //         td.w-6/12.px-4.py-2.text-left= item.play
+            //         td.w-2/12.px-4.py-2.text-left= item.duration
+        
+    hr.border-gray-400.my-4
+
+
+
+block detail
+    // infor for singer or author
+    h3.text-2xl.mb-4= singer.name
+    img(src=song.thumbnail, alt="" class="w-full max-h-[300px]  aspect-[3/4] object-cover rounded-xl")
+    div.flex.items-center.mt-4.mb-4
+        div.flex-1
+            p(class="text-xl font-semibold hover:underline line-clamp-1")= song.title
+            p.text-md.text-gray-500= singer.name
+        button(class="w-[24px] h-[24px] ml-2 rounded-full border text-sm")
+            i(class="fa-solid fa-plus")
+    
+    div.p-2.bg-gray-700.rounded-lg.py-3.relative
+        p.text-lg.mb-2.absolute.top-4.left-4 About the artist
+        img(src=singer.thumbSinger, alt="" class="w-full max-h-[300px]  aspect-[3/4] object-cover rounded-xl")
+        p(class="line-clamp-3 text-sm text-gray-400 mt-3")= singer.description
+    
+    div.flex.justify-between.mt-4.mb-8
+        div.flex-none
+            p.text-md= singer.name
+            p.text-lg Month listeners: #{singer.listeners}
+        button.rounded.border.px-4.rounded-xl
+            p Follow
+    div
+        p.font-semibold.text-lg.mb-4 Discover more
+        div(class="flex ")
+            a(href="#" class="py-2 px-4 bg-gray-700 rounded-[20px] mr-2") Documentary 
+            a(href="#" class="py-2 px-4 bg-gray-700 rounded-[20px]") Science 

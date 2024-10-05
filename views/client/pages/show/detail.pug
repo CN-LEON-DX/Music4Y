@@ -1,6 +1,8 @@
 
 extends ../../layouts/default.pug
 include ../../mixins/play-add-playlist.pug
+include ../../mixins/action-download-add.pug
+
 
 block main
     div(class="flex p-4 bg-gradient-to-b from-stone-500 to-blue-700 mt-4 rounded-lg ")
@@ -11,16 +13,8 @@ block main
             h2.text-2xl.my-1.font-semibold= podcast.title
             p.mt-2.text-xl= podcast.author
 
-    div(class="flex mt-6 gap-4 items-center justify-end ")
-        
-        button(class="w-[30px] h-[30px] border-gray-400 rounded-full border border-2 text-sm text-center")
-            <i class="fa-solid fa-arrow-down" style="color: #D3D3D3;"></i>
-        button(class="w-[30px] h-[30px] border-gray-400 rounded-full border border-2 text-sm text-center")
-            i(class="fa-solid fa-plus" style=`color: #D3D3D3;`)
-        button(class="w-[30px] h-[30px] border-gray-400 rounded-full text-sm text-center")
-            <i class="fa-solid fa-ellipsis" style="color: #D3D3D3;"></i>
-        button(class="w-[44px] h-[44px] rounded-full text-center", style=`background-color: #4A148C;`)
-            i(class="fa-solid fa-play", style=`color: #ffffff;`)
+    +actionDownloadAdd()
+
     div.mt-4
         div.flex.justify-between
             h2.text-2xl.font-semibold Espisode description

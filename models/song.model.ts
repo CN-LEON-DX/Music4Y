@@ -1,4 +1,3 @@
-
 import mongoose from "mongoose";
 
 const songSchema = new mongoose.Schema(
@@ -12,8 +11,10 @@ const songSchema = new mongoose.Schema(
     transcipt: String,
     genre: String,
     status: String,
-    likes: Number, 
+    likes: Number,
     thumbnail: String,
+    duration: String,
+    plays: Number,
     slug: {
       type: String,
       unique: true,

@@ -4,12 +4,12 @@ const singerSchema = new mongoose.Schema(
   {
     name: String,
     avatar: String,
-    desciption: String,
+    description: String,
     status: String,
     songs: Array,
     followers: Number,
     listeners: Number,
-    thumbSinger: Array,
+    thumbSinger: String,
     slug: {
       type: String,
       unique: true,

@@ -565,12 +565,20 @@ body{
   /* Use font-fredoka here */
 }
 
+.fixed{
+  position: fixed;
+}
+
 .absolute{
   position: absolute;
 }
 
 .relative{
   position: relative;
+}
+
+.sticky{
+  position: sticky;
 }
 
 .bottom-4{
@@ -583,6 +591,22 @@ body{
 
 .top-0{
   top: 0px;
+}
+
+.top-4{
+  top: 1rem;
+}
+
+.left-4{
+  left: 1rem;
+}
+
+.z-10{
+  z-index: 10;
+}
+
+.z-20{
+  z-index: 20;
 }
 
 .my-1{
@@ -651,6 +675,10 @@ body{
   margin-top: auto;
 }
 
+.mt-3{
+  margin-top: 0.75rem;
+}
+
 .line-clamp-1{
   overflow: hidden;
   display: -webkit-box;
@@ -673,12 +701,36 @@ body{
   display: flex;
 }
 
+.table{
+  display: table;
+}
+
 .grid{
   display: grid;
 }
 
 .aspect-video{
   aspect-ratio: 16 / 9;
+}
+
+.aspect-\[\]{
+  aspect-ratio: ;
+}
+
+.aspect-\[3\/4\]{
+  aspect-ratio: 3/4;
+}
+
+.aspect-\[5\/6\]{
+  aspect-ratio: 5/6;
+}
+
+.aspect-\[10\/1\]{
+  aspect-ratio: 10/1;
+}
+
+.aspect-\[10\/12\]{
+  aspect-ratio: 10/12;
 }
 
 .h-10{
@@ -729,6 +781,14 @@ body{
   height: 100vh;
 }
 
+.max-h-\[200px\]{
+  max-height: 200px;
+}
+
+.max-h-\[300px\]{
+  max-height: 300px;
+}
+
 .w-10{
   width: 2.5rem;
 }
@@ -771,6 +831,22 @@ body{
 
 .w-full{
   width: 100%;
+}
+
+.w-1\/12{
+  width: 8.333333%;
+}
+
+.w-2\/12{
+  width: 16.666667%;
+}
+
+.w-3\/12{
+  width: 25%;
+}
+
+.w-6\/12{
+  width: 50%;
 }
 
 .flex-1{
@@ -908,6 +984,11 @@ body{
   border-color: rgb(148 163 184 / var(--tw-border-opacity));
 }
 
+.border-gray-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
+}
+
 .bg-\[\#1f1f1f\]{
   --tw-bg-opacity: 1;
   background-color: rgb(31 31 31 / var(--tw-bg-opacity));
@@ -1041,6 +1122,10 @@ body{
 
 .pt-10{
   padding-top: 2.5rem;
+}
+
+.text-left{
+  text-align: left;
 }
 
 .text-center{

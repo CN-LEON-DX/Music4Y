@@ -9,6 +9,7 @@ const genreSchema = new mongoose.Schema(
     author: String,
     categoryID: String,
     genre: String,
+    songID: String,
     slug: {
       type: String,
       unique: true,
