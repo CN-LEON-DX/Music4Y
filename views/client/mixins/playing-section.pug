@@ -1,0 +1,23 @@
+mixin playingSection(title, artist, isPlaying, isPaused)
+    div(class="flex items-center justify-between bg-gray-900 p-4 rounded-lg fixed bottom-0 w-full")
+        div.flex.items-center
+            img(src="https://res.cloudinary.com/demo/image/upload/v1692785918/sample.jpg" class="w-12 h-12 rounded-full object-cover mr-4")
+            div
+                p.text-white.text-sm= title
+                p.text-gray-400.text-xs= artist
+        
+        div.flex.items-center
+            button#previous.text-white.mr-2
+                i.fa-solid.fa-backward
+            if isPlaying
+                button#play-pause.text-white.bg-white.text-black.rounded-full.w-12.h-12.mx-2.flex.items-center.justify-center
+                    i.fa-solid.fa-pause
+            else if isPaused
+                button#play-pause.text-white.bg-white.text-black.rounded-full.w-12.h-12.mx-2.flex.items-center.justify-center
+                    i.fa-solid.fa-play
+            button#next.text-white.mr-2
+                i.fa-solid.fa-forward
+
+        div.flex.items-center
+            i.fa-solid.fa-volume-up.text-white.mr-2
+            input(type="range" min="0" max="100" value="50" class="volume-slider")

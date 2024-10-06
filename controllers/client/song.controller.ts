@@ -12,19 +12,22 @@ export const detail = async (req: Request, res: Response) => {
   let title = req.params.title;
   let id = req.params.id;
   // console.log(playlistID);/
+  try {
+    const song = await Song.findOne({
+      deleted: false,
+      _id: id,
+    });
 
-  const song = await Song.findOne({
-    deleted: false,
-    _id: id,
-  });
+    const singer = await Singer.findOne({ deleted: false, _id: song.singerID });
 
-  console.log(song);
-  const singer = await Singer.findOne({ deleted: false, _id: song.singerID });
-  console.log(singer);
-
-  res.render("client/pages/song/detail", {
-    pageTitle: title,
-    song: song,
-    singer: singer,
-  });
+    res.render("client/pages/song/detail", {
+      pageTitle: title,
+      song: song,
+      singer: singer,
+    });
+  } catch (error) {
+    console.log(error);
+  }
 };
+
+

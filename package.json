@@ -30,6 +30,7 @@
     "@tailwindcss/line-clamp": "^0.4.4",
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
+    "howler": "^2.2.4",
     "mongoose": "^8.7.0",
     "pug": "^3.0.3",
     "tailwindcss": "^3.4.13",

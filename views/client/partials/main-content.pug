@@ -1,9 +1,34 @@
 
-main(class="bg-[#1f1f1f] p-3 md:p-6 md:pt-8 flex-grow overflow-y-auto rounded-[20px] no-scrollbar mr-4" style="width: 70%")
+main(class="bg-[#1f1f1f] p-3 md:p-6 md:pt-8 flex-grow overflow-y-auto rounded-[20px] no-scrollbar mr-4 relative" style="width: 70%")
     .flex.items-center.justify-between.border-b
         i.fa.fa-search.mr-2(style="color: #ffffff;")
         input(type="text" placeholder="Search" class="bg-bottom rounded-[20px] bg-[#1f1f1f] px-4 py-2 text-white flex-1 outline-none")
     block main
     
             
+    // playing audio or music section
+    // phần chứa phần tử sticky
     
+    div.absolute.bottom-0.left-0.w-full.p-4.rounded-xl.bg-slate-500.bg-opacity-10
+        input(type="range" id="play-progress" min="0" max="100" value="0" class="w-full h-3 py-3  rounded-full cursor-pointer bg-gray-600")
+        .flex.items-center.justify-between.rounded-t-lg
+            .flex.items-center
+                img(src="https://res.cloudinary.com/dswmkjagw/image/upload/v1728052106/Screenshot_from_2024-10-04_21-27-44_bmhu4q.png", alt="Song Thumbnail" class="w-12 h-12 rounded-lg object-cover mr-3")
+                .flex.flex-col
+                    p.font-semibold.text-white Chúng ta của tương lai
+                    p.text-sm.text-gray-400 Sơn Tùng M-TP
+            .flex.items-center.gap-4
+                button(id="repeat")
+                    i.fa.fa-solid.fa-repeat.text-white.text-xl.cursor-pointer
+                i.fa.fa-backward.text-white.text-xl.cursor-pointer
+                button(id="play-pause")
+                    i.fa.fa-play.fa-solid.text-black.text-xl.bg-white.p-2.rounded-full.cursor-pointer.text-center
+                i.fa.fa-forward.text-white.text-xl.cursor-pointer
+                i.fa.fa-random.text-white.text-xl.cursor-pointer
+            .flex.items-center.gap-4
+                i.fa.fa-list.text-white.text-xl.cursor-pointer
+                i.fa.fa-heart.text-white.text-xl.cursor-pointer
+                div.flex.items-center
+                    i.fa.fa-volume-up.text-white.text-xl.cursor-pointer
+                    input(type="range" min="0" max="100" value="50" class="volume-slider w-24 h-2 cursor-pointer bg-gray-600 rounded-full ml-4")
+
