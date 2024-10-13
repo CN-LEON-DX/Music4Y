@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Login Page
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css")
+
+  body.bg-black.flex.justify-center.items-center.min-h-screen
+    .bg-gray-800.shadow-2xl.rounded-lg.p-8.w-96
+      h2.text-center.text-3xl.font-bold.text-white.mb-6 Login
+
+      form(action="/user/login" method="POST" class="w-full")
+        .mb-4
+          label.block.text-gray-600.font-semibold.mb-2(for="email") Email
+          input#email(type="email" required class="shadow-md appearance-none border border-gray-300 rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-400")
+
+        .mb-4
+          label.block.text-gray-600.font-semibold.mb-2(for="password" ) Password
+          input#password(type="password" required class="shadow-md appearance-none border border-gray-300 rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-400")
+        if (error)
+          p.text-sm.mt-2.text-red.mb-2.text-white Password or email is incorrect.
+        button(class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg w-full transition duration-200 transform hover:scale-105" type="submit") Log In
+
+      .mt-4.text-center
+        a(class="text-blue-600 hover:underline" href="#") Forgot Password?
+      
+      .mt-2.text-center
+        p.text-gray-600.text-sm Don't have an account?
+        a(class="text-blue-600 hover:underline" href="/user/register") Register

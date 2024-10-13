@@ -1,8 +1,13 @@
 // Now Playing Section
 div(class="bg-gray-900 p-8 border-l border-gray-800 rounded-[20px] overflow-y-auto no-scrollbar" style="width: 30%; ")
     div(class="flex w-full justify-end items-center mb-6  top-0 bg-gray-900 z-1 p-4")
-        p(class="mr-4 font-semibold") Nejavu E.
-        div(class="w-[40px] h-[40px] rounded-full")
-            img(src="https://res.cloudinary.com/dswmkjagw/image/upload/v1727791247/home_pb6lx9.jpg" alt="you" class="rounded-full object-cover")
-    
+        if (!user)
+            a(class="mr-4 font-semibold" href=`/user/login/`) Login
+            a(class="w-[40px] h-[40px] rounded-full" href=`/user/login/`)
+                img(src="https://res.cloudinary.com/dswmkjagw/image/upload/v1727791247/home_pb6lx9.jpg" alt="you" class="rounded-full object-cover")
+        else
+            p(class="mr-4 font-semibold text-white") #{user.fullName}
+            a(class="w-[40px] h-[40px] rounded-full" href=`/user/infor/${user.id}`)
+                img(src="https://res.cloudinary.com/dswmkjagw/image/upload/v1727791247/home_pb6lx9.jpg" alt="you" class="rounded-full object-cover")
+        
     block detail
